@@ -8,7 +8,7 @@ class AddItemForm extends React.Component {
     this.state = {
       name: "",
       description: "",
-      imageUrl: "",
+      imageUrl: "http://lorempixel.com/400/200/food/",
       price: "",
       stock: ""
     };
@@ -20,7 +20,7 @@ class AddItemForm extends React.Component {
     this.setState(() => ({
       name: "",
       description: "",
-      imageUrl: "",
+      imageUrl: "http://lorempixel.com/400/200/food/",
       price: "",
       stock: ""
     }));

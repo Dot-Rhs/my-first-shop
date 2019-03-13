@@ -10,7 +10,7 @@ class Router extends React.Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={StoreSelector} />
-          <Route path="/:store" component={App} />
+          <Route path="/:place" component={App} />
         </Switch>
       </BrowserRouter>
     );

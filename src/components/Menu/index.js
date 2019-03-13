@@ -6,12 +6,19 @@ import MenuItem from "../MenuItem";
 
 import css from "./Menu.module.css";
 
-const Menu = ({ items, addToOrder }) => (
+const Menu = ({ items, addToOrder, setRating, baseUrl }) => (
   <div>
     <Heading>Menu</Heading>
     <ul className={css.list}>
       {Object.keys(items).map(key => (
-        <MenuItem key={key} onClick={() => addToOrder(key)} {...items[key]} />
+        <MenuItem
+          key={key}
+          id={key}
+          onClick={() => addToOrder(key)}
+          {...items[key]}
+          setRating={setRating}
+          url={`${baseUrl}/${key}`}
+        />
       ))}
     </ul>
   </div>
@@ -19,7 +26,8 @@ const Menu = ({ items, addToOrder }) => (
 
 Menu.propTypes = {
   items: PropTypes.object,
-  addToOrder: PropTypes.func
+  addToOrder: PropTypes.func,
+  setRating: PropTypes.func
 };
 
 export default Menu;
